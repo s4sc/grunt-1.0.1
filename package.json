@@ -11,7 +11,9 @@
   },
   "scripts": {
     "test": "grunt test",
-    "test-tap": "grunt test:tap"
+    "test-tap": "grunt test:tap",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "main": "lib/grunt",
   "bin": {
@@ -52,7 +54,8 @@
     "minimatch": "~3.0.0",
     "nopt": "~3.0.6",
     "path-is-absolute": "~1.0.0",
-    "rimraf": "~2.2.8"
+    "rimraf": "~2.2.8",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "difflet": "~0.2.3",
@@ -68,5 +71,6 @@
   "files": [
     "lib",
     "bin"
-  ]
+  ],
+  "snyk": true
 }
